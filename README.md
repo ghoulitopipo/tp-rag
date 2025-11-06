@@ -50,7 +50,7 @@ A partir du tutoriel https://python.langchain.com/docs/tutorials/rag/, mettre en
 
 Dans cette partie, vous allez mettre en oeuvre un chatbot en utilisant un _Large Language Model_ exploiter les patagraphes trouvés dans la BDD vectorielle pour synthétiser les informations et construire une réponse adequate.
 
-Nous pourrions utiliser GPT3.5 ou GPT4 mais pour des raisons de coût (il faut un abonnement payant à OpenAi), nous allons utiliser un 'petit' modèle open source [Qwen2.5](https://github.com/QwenLM/Qwen2.5).
+Nous pourrions utiliser GPT3.5 ou GPT4 mais pour des raisons de coût (il faut un abonnement payant à OpenAi), nous allons utiliser un 'petit' modèle open source [Qwen3](https://github.com/QwenLM/Qwen3).
 
 **Exercice 3. : prompt template**
 
@@ -69,14 +69,14 @@ Puis, **dans le terminal**, exécuter
 ```
 curl https://ollama.ai/install.sh | sh
 ollama serve &
-ollama run qwen2.5:14b
+ollama run qwen3:8b
 ```
 
 Puis pour utiliser le LLM, inspirez-vous de cet exemple : 
 
 ```
 llm = ChatOllama(
-    model="qwen2.5:14b",
+    model="qwen3:8b",
     temperature=0,
 )
 ```
